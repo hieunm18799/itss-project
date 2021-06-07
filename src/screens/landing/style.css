@@ -1,0 +1,9 @@
+.landing__container {
+  top: -216;
+  position: relative;
+  color: #000;
+}
+
+.landing__section {
+  padding: 100px 150px;
+}

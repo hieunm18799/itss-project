@@ -1,0 +1,85 @@
+body {
+  background-color: #e5e5e5;
+}
+
+.ctn-course {
+  padding-right: 30px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-self: center;
+  justify-content: space-between;
+}
+
+.page__gap {
+  width: 100%;
+  height: 95px;
+}
+
+.ctn-list-course {
+  padding: 65px 0;
+  width: 65%;
+  background-color: #525464;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.6);
+}
+
+.ctn-process-course {
+  width: 33%;
+  border-radius: 10px;
+}
+
+.list-lesson {
+  height: 500px;
+}
+
+.ctn-sub-list-course {
+  margin-top: 30px;
+  height: 100%;
+  width: 80%;
+}
+
+.item-dot {
+  height: 100px;
+  width: 100px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+
+.txt-title {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.item-small-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 8px;
+  background: linear-gradient(#f27a54, #a154f2);
+}
+
+.txt-lesson {
+  color: #ffffff;
+  font-size: 18px;
+  position: relative;
+  top: -4px;
+}
+
+.ctn-process {
+  flex-direction: row;
+  display: flex;
+  margin-left: 70px;
+  margin-top: 30px;
+}

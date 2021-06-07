@@ -1,0 +1,59 @@
+.stats__section {
+  background-color: #fff;
+}
+
+.stats__title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.stats__title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 150px;
+  height: 2px;
+  background-color: rgb(255, 159, 15);
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.stats__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 5px 25px;
+}
+
+.stats__icon {
+  text-align: center;
+  font-size: 70px;
+  color: #ed4c5c;
+}
+
+.stats__content {
+  text-align: center;
+}
+
+.stats__content--title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.stats__amount {
+  position: absolute;
+  font-size: 80px;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  opacity: 0.08;
+  color: #101010;
+  z-index: 999;
+}

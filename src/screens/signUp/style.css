@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+body,
+input {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+}
+
+.app__section {
+  padding: 0px 150px;
+}
+
+.sign_in-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.sign_in-form {
+  position: absolute;
+  width: 100%;
+  top: 16.11%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-height: 782px) {
+  .sign_in-form {
+    top: 126px;
+  }
+}
+
+.title {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+  color: #000000;
+}
+
+.input-field h4 {
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+  color: #555770;
+}
+
+.input-field input {
+  outline: none;
+  border: none;
+  line-height: 250%;
+  border-radius: 8px;
+  padding: 0 0.5rem;
+  background-color: #f0f0f0;
+  padding: 3px 12px;
+}
+
+.input-field input::placeholder {
+  font-size: 1rem;
+  line-height: 150%;
+  color: #8e90a6, 100%;
+}
+
+.sign_in-btn {
+  min-width: 281px;
+  width: 20%;
+  border: none;
+  outline: none;
+  height: 3.33em;
+  background: linear-gradient(90deg, #f27a54 0%, #a154f2 100%);
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 0.75rem;
+  margin: 1em;
+}
+
+.sign_in-btn:hover {
+  background-color: #4d84e2;
+}
+
+.ask_sign_in {
+  font-size: 1rem;
+  min-width: 299px;
+  min-height: 22px;
+  line-height: 118.75%;
+  margin-top: 2em;
+}
+
+.go_sign_in {
+  font-weight: bold;
+  outline: none;
+  border: none;
+  padding-left: 5px;
+}

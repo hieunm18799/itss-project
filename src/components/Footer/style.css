@@ -1,0 +1,44 @@
+.app__footer {
+  padding: 100px 150px;
+}
+
+.footer__info {
+  text-align: left;
+}
+
+.footer__info--title {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.footer__copyright {
+  margin-top: 50px;
+}
+
+.footer__icon-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.footer__icon {
+  font-size: 25px;
+  color: #282828;
+  margin-right: 5px;
+}
+
+.footer__icon--facebook:hover {
+  color: #3b5998;
+}
+
+.footer__icon--instagram:hover {
+  color: #f77737;
+}
+
+.footer__icon--twitter:hover {
+  color: #1da1f2;
+}
+
+.footer__icon--youtube:hover {
+  color: #ff0000;
+}

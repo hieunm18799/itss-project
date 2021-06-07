@@ -1,0 +1,13 @@
+.filter__item {
+  background-color: #ebebf0;
+  border: none;
+  margin-bottom: 4px;
+  padding: 5px 20px;
+  border-radius: 4px;
+  text-align: left;
+  transition: all 0.2s;
+}
+.filter__item:hover {
+  background: #5bff7f;
+  border: none;
+}

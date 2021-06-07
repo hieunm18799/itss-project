@@ -1,0 +1,37 @@
+.references {
+  background-color: #e5e5e5;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.references__card {
+  transition: 0.2s;
+  height: 200px;
+}
+
+.references__card:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+.references__card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.references__button--download {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.references__button--download:hover {
+  text-decoration: none;
+}
