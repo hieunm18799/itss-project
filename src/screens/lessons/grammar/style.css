@@ -10,6 +10,31 @@
   padding-right: 15%;
 }
 
+.grammar-box {
+  background-color: white;
+  color: black;
+  text-align: left;
+  padding: 3%;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 3%;
+}
+
+.grammar__title {
+  font-weight: bold;
+  text-decoration-line: underline;
+}
+
+.grammar__content {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.grammar__structure {
+  font-weight: bold;
+  text-align: center;
+}
+
 .done-bar {
   background-color: white;
 }
