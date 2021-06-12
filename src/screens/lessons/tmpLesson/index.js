@@ -19,7 +19,10 @@ export const Temp = (props) => {
 
   const done = () => {
     let db = firestore.doc(`User/${UID}/History/${stateCourse}`);
-    let tmp = [...dataHistory, idLesson];
+    let tmp = dataHistory;
+    if(!tmp.includes(idLesson)){
+      tmp = [...dataHistory, idLesson];
+    }
     let updateProcess = parseFloat(((tmp.length / 8) * 100).toFixed(2));
     db.update({
       [stateLesson]: { data: tmp, process: updateProcess },
