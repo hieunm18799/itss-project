@@ -3,9 +3,9 @@ import { Redirect, Route, Switch } from 'react-router-dom'
 import { CContainer, CSpinner } from '@coreui/react'
 
 // routes config
-import routes from '../routers'
+import routes from '../../routers'
 
-const AppContent = () => {
+export const AppContent = () => {
   return (
     <CContainer lg>
       <Suspense fallback={<CSpinner color="primary" />}>
@@ -34,4 +34,3 @@ const AppContent = () => {
   )
 }
 
-export default React.memo(AppContent)

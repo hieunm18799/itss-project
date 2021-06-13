@@ -6,7 +6,7 @@ import { Stats } from "./Stats";
 import { Footer } from "../../components/Footer";
 import React from "react";
 
-export const LandingPage = () => {
+const LandingPage = () => {
   return (
     <div className="landing__container">
       <Home />
@@ -17,3 +17,4 @@ export const LandingPage = () => {
     </div>
   );
 };
+export default LandingPage
