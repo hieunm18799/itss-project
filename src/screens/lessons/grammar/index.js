@@ -16,13 +16,13 @@ export const Grammar = ({ doneLesson, dataLesson }) => {
       <div className="content container-fluid text-center">
         <h3 className="inline-block mb-3">{dataLesson?.title}</h3>
         <div className="grammar-box">
-          <div className="grammar__title">Cách dùng:</div>
+          <label className="grammar__title">Cách dùng:</label>
           <p className="grammar__content grammar__structure">{dataLesson?.structure}</p>
-          <div className="grammar__title">Ý nghĩa:</div>
+          <label className="grammar__title">Ý nghĩa:</label>
           <p className="grammar__content">{dataLesson?.mean}</p>
-          <div className="grammar__title">Giải thích:</div>
+          <label className="grammar__title">Giải thích:</label>
           <p className="grammar__content">{dataLesson?.detail}</p>
-          <div className="grammar__title">Ví dụ:</div>
+          <label className="grammar__title">Ví dụ:</label>
           <p className="grammar__content">{dataLesson?.example}</p>
         </div>
       </div>
