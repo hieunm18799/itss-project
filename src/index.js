@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'core-js';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from "./states/store";
+import { icons } from './assets/icons';
+
+React.icons = icons;
 
 ReactDOM.render(
   <React.StrictMode>

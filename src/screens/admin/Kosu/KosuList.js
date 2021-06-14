@@ -9,7 +9,7 @@ const Dashboard = () => {
   }
 
   return (
-      <div>hiihihihi</div>
+      <div>danh sach khoa hoc</div>
   )
 }
 

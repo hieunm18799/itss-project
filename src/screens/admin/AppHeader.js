@@ -13,7 +13,7 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react';
 
-import AppBreadcrumb from './AppBreadcrumb';
+// import AppBreadcrumb from './AppBreadcrumb';
 
 import { AppHeaderDropdown } from './header/index';
 
@@ -35,15 +35,15 @@ export const AppHeader = () => {
         </CHeaderBrand>
         <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>
-            <CNavLink to="/dashboard" component={NavLink} activeClassName="active">
+            <CNavLink to="/admin" component={NavLink} activeClassName="active">
               ダッシュボード
             </CNavLink>
           </CNavItem>
           <CNavItem>
-            <CNavLink href="#">ユーザー</CNavLink>
+            <CNavLink href="/admin/yuza">ユーザー</CNavLink>
           </CNavItem>
           <CNavItem>
-            <CNavLink href="#">コース</CNavLink>
+            <CNavLink href="/admin/kosu">コース</CNavLink>
           </CNavItem>
         </CHeaderNav>
         <CHeaderNav className="ms-3">
@@ -52,7 +52,7 @@ export const AppHeader = () => {
       </CContainer>
       <CHeaderDivider />
       <CContainer fluid>
-        <AppBreadcrumb />
+        {/* <AppBreadcrumb /> */}
       </CContainer>
     </CHeader>
   )
