@@ -14,8 +14,8 @@ export const DetailCourse = (props) => {
   let listLesson = [
     {
       id: 1,
-      title: `Từ vựng ${stateCourse} - Bài số ${numberLesson}`,
-      data: [{ id: "V1" }, { id: "V2" }, { id: "V3" }],
+      title: `Chữ hán ${stateCourse} - Bài số ${numberLesson}`,
+      data: [{ id: "K1" }, { id: "K2" }, { id: "K3" }],
     },
     {
       id: 2,
