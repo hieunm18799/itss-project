@@ -8,7 +8,7 @@ import {
   CTableHeaderCell,
   CTableRow,
 } from '@coreui/react';
-import CIcon from 'coreui/icons-react';
+import CIcon from '@coreui/icons-react'
 
 const UserList = () => {
 
