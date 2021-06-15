@@ -7,26 +7,32 @@ import {
   CTableHead,
   CTableHeaderCell,
   CTableRow,
+  CCard,
+  CCardBody,
+  CCardHeader
 } from '@coreui/react'
 
-const UserList = () => {
+const DocList = () => {
 
   return (
+    <CCard>
+  <CCardHeader>材料リスト</CCardHeader>
+  <CCardBody>
     <CTable>
     <CTableHead>
       <CTableRow>
         <CTableHeaderCell scope="col">#</CTableHeaderCell>
-        <CTableHeaderCell scope="col">Class</CTableHeaderCell>
-        <CTableHeaderCell scope="col">Heading</CTableHeaderCell>
-        <CTableHeaderCell scope="col">Heading</CTableHeaderCell>
+        <CTableHeaderCell scope="col">名前</CTableHeaderCell>
+        <CTableHeaderCell scope="col">リンく</CTableHeaderCell>
+        <CTableHeaderCell scope="col">レベル</CTableHeaderCell>
       </CTableRow>
     </CTableHead>
     <CTableBody>
       <CTableRow>
         <CTableHeaderCell scope="row">1</CTableHeaderCell>
-        <CTableDataCell>Mark</CTableDataCell>
-        <CTableDataCell>Otto</CTableDataCell>
-        <CTableDataCell>@mdo</CTableDataCell>
+        <CTableDataCell>みんなの日本語</CTableDataCell>
+        <CTableDataCell>https://drive.google.com</CTableDataCell>
+        <CTableDataCell>N5</CTableDataCell>
       </CTableRow>
       <CTableRow>
         <CTableHeaderCell scope="row">2</CTableHeaderCell>
@@ -41,7 +47,9 @@ const UserList = () => {
       </CTableRow>
     </CTableBody>
   </CTable>
+  </CCardBody>
+  </CCard>
   )
 }
 
-export default UserList
+export default DocList

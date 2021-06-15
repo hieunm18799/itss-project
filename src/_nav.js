@@ -36,7 +36,7 @@ const _nav = [
     _component: 'CNavItem',
     as: NavLink,
     anchor: '材料管理',
-    to: '/admin/#',
+    to: '/admin/zairyou',
     icon: <CIcon name="cil-pencil" customClasses="nav-icon" />,
   },
 ]

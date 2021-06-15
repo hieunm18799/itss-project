@@ -36,14 +36,8 @@ export const AppHeader = () => {
         <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>
             <CNavLink to="/admin" component={NavLink} activeClassName="active">
-              ダッシュボード
+            ホーム
             </CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="/admin/yuza">ユーザー</CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="/admin/kosu">コース</CNavLink>
           </CNavItem>
         </CHeaderNav>
         <CHeaderNav className="ms-3">

@@ -1,30 +1,48 @@
 import React, { lazy } from 'react'
 import {
-  CCard,
-  CCardBody,
-  CCardHeader,
-  CCol,
-  CRow,
   CTable,
   CTableBody,
-  CTableCaption,
   CTableDataCell,
   CTableHead,
   CTableHeaderCell,
   CTableRow,
 } from '@coreui/react'
-import { DocsCallout, Example } from 'src/reusable'
 
 const WidgetsDropdown = lazy(() => import('../../../components/Widgets/WidgetsDropdown'));
 const WidgetsBrand = lazy(() => import('../../../components/Widgets/WidgetsBrand.js'))
 
 const Dashboard = () => {
-  const random = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min)
-  }
 
   return (
-      <div>danh sach khoa hoc</div>
+    <CTable>
+    <CTableHead>
+      <CTableRow>
+        <CTableHeaderCell scope="col">#</CTableHeaderCell>
+        <CTableHeaderCell scope="col">Class</CTableHeaderCell>
+        <CTableHeaderCell scope="col">Heading</CTableHeaderCell>
+        <CTableHeaderCell scope="col">Heading</CTableHeaderCell>
+      </CTableRow>
+    </CTableHead>
+    <CTableBody>
+      <CTableRow>
+        <CTableHeaderCell scope="row">1</CTableHeaderCell>
+        <CTableDataCell>Mark</CTableDataCell>
+        <CTableDataCell>Otto</CTableDataCell>
+        <CTableDataCell>@mdo</CTableDataCell>
+      </CTableRow>
+      <CTableRow>
+        <CTableHeaderCell scope="row">2</CTableHeaderCell>
+        <CTableDataCell>Jacob</CTableDataCell>
+        <CTableDataCell>Thornton</CTableDataCell>
+        <CTableDataCell>@fat</CTableDataCell>
+      </CTableRow>
+      <CTableRow>
+        <CTableHeaderCell scope="row">3</CTableHeaderCell>
+        <CTableDataCell colspan="2">Larry the Bird</CTableDataCell>
+        <CTableDataCell>@twitter</CTableDataCell>
+      </CTableRow>
+    </CTableBody>
+  </CTable>
   )
 }
 

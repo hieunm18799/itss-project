@@ -3,7 +3,7 @@ import AppSidebar from "./AppSidebar";
 import {AppHeader} from "./AppHeader";
 import {AppContent} from "./AppContent";
 import KosuList from "./Kosu/KosuList"
-const AdminPage = () => {
+const KosuKanri = () => {
   return (
     <div>
       <AppSidebar />
@@ -16,5 +16,5 @@ const AdminPage = () => {
     </div>
   )
 }
-export default AdminPage
+export default KosuKanri
 
