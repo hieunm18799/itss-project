@@ -31,22 +31,18 @@ export const AppHeader = () => {
           <CIcon name="cil-menu" size="lg" />
         </CHeaderToggler>
         <CHeaderBrand className="mx-auto d-md-none" to="/">
-          <CIcon name="logo" height="48" alt="Logo" />
+          <CIcon name="logo" height="50" alt="Logo" />
         </CHeaderBrand>
         <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>
             <CNavLink to="/admin" component={NavLink} activeClassName="active">
-            ホーム
+            <h1 style={{color: "#000066", fontSize: 40, textDecoration: "underline"}}><b>ホーム</b></h1>
             </CNavLink>
           </CNavItem>
         </CHeaderNav>
         <CHeaderNav className="ms-3">
           <AppHeaderDropdown />
         </CHeaderNav>
-      </CContainer>
-      <CHeaderDivider />
-      <CContainer fluid>
-        {/* <AppBreadcrumb /> */}
       </CContainer>
     </CHeader>
   )

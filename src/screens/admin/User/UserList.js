@@ -7,7 +7,8 @@ import {
   CTableHead,
   CTableHeaderCell,
   CTableRow,
-} from '@coreui/react'
+} from '@coreui/react';
+import CIcon from 'coreui/icons-react';
 
 const UserList = () => {
 
@@ -16,28 +17,35 @@ const UserList = () => {
     <CTableHead>
       <CTableRow>
         <CTableHeaderCell scope="col">#</CTableHeaderCell>
-        <CTableHeaderCell scope="col">Class</CTableHeaderCell>
-        <CTableHeaderCell scope="col">Heading</CTableHeaderCell>
-        <CTableHeaderCell scope="col">Heading</CTableHeaderCell>
+        <CTableHeaderCell scope="col">アカウント</CTableHeaderCell>
+        <CTableHeaderCell scope="col">名前 </CTableHeaderCell>
+        <CTableHeaderCell scope="col">メール</CTableHeaderCell>
+        <CTableHeaderCell scope="col">CRUD</CTableHeaderCell>
       </CTableRow>
     </CTableHead>
     <CTableBody>
       <CTableRow>
         <CTableHeaderCell scope="row">1</CTableHeaderCell>
-        <CTableDataCell>Mark</CTableDataCell>
-        <CTableDataCell>Otto</CTableDataCell>
-        <CTableDataCell>@mdo</CTableDataCell>
+        <CTableDataCell>QuangManh</CTableDataCell>
+        <CTableDataCell>Bui Quang Manh</CTableDataCell>
+        <CTableDataCell>mah@gmail.com</CTableDataCell>
+        <CTableDataCell>
+          <CTableRow>
+          <CTableDataCell> <CIcon size={'sm'} name={'cilSettings'} /> </CTableDataCell>
+          </CTableRow>  
+        </CTableDataCell>
       </CTableRow>
       <CTableRow>
         <CTableHeaderCell scope="row">2</CTableHeaderCell>
-        <CTableDataCell>Jacob</CTableDataCell>
-        <CTableDataCell>Thornton</CTableDataCell>
-        <CTableDataCell>@fat</CTableDataCell>
+        <CTableDataCell>HiepNguyen</CTableDataCell>
+        <CTableDataCell>Nguyen Manh Hiep</CTableDataCell>
+        <CTableDataCell>Hiep@gmail.com</CTableDataCell>
       </CTableRow>
       <CTableRow>
         <CTableHeaderCell scope="row">3</CTableHeaderCell>
-        <CTableDataCell colspan="2">Larry the Bird</CTableDataCell>
-        <CTableDataCell>@twitter</CTableDataCell>
+        <CTableDataCell>MinhHieu</CTableDataCell>
+        <CTableDataCell>Nguyen Minh Hieu</CTableDataCell>
+        <CTableDataCell>Hieu@gmail.com</CTableDataCell>
       </CTableRow>
     </CTableBody>
   </CTable>
