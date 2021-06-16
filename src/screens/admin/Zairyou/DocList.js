@@ -1,4 +1,4 @@
-import React, { lazy } from 'react'
+import React, {  useEffect, useState } from 'react'
 
 import {
   CTable,
@@ -10,10 +10,29 @@ import {
   CCard,
   CCardBody,
   CCardHeader
-} from '@coreui/react'
+} from '@coreui/react';
+import { firestore } from '../../../services/firebase/firebase';
 
 const DocList = () => {
-
+  const [references, setReferences] = useState([]);
+  const [checkReferences, setCheckReferences] = useState([]);
+  let i =1;
+  const getReferences = () => {
+    let db = firestore.doc(`References/All`);
+    db.get().then((doc) => {
+      if (doc.exists) {
+        let data = doc.data()["documents"];
+        setReferences(data);
+        setCheckReferences(data);
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("no data");
+      }
+    });
+  };
+  useEffect(() => {
+    getReferences();
+  }, []);
   return (
     <CCard>
   <CCardHeader>Danh sách Tài liệu</CCardHeader>
@@ -24,28 +43,21 @@ const DocList = () => {
         <CTableHeaderCell scope="col">#</CTableHeaderCell>
         <CTableHeaderCell scope="col">Tên</CTableHeaderCell>
         <CTableHeaderCell scope="col">Link</CTableHeaderCell>
-        <CTableHeaderCell scope="col">Trình độ</CTableHeaderCell>
+        <CTableHeaderCell scope="col">Ảnh</CTableHeaderCell>
       </CTableRow>
     </CTableHead>
     <CTableBody>
-      <CTableRow>
-        <CTableHeaderCell scope="row">1</CTableHeaderCell>
-        <CTableDataCell>みんなの日本語</CTableDataCell>
-        <CTableDataCell>https://drive.google.com</CTableDataCell>
-        <CTableDataCell>N5</CTableDataCell>
+      {references?.map((item) => (
+        <CTableRow>
+        <CTableHeaderCell scope="row">{item?.id}</CTableHeaderCell>
+        <CTableDataCell>{item?.title}</CTableDataCell>
+        <CTableDataCell>{item?.url}</CTableDataCell>
+        <CTableDataCell><img
+              src={item?.cover}
+              style={{ height: "100%", width: "100%", objectFit: "cover" }}
+            /></CTableDataCell>
       </CTableRow>
-      <CTableRow>
-      <CTableHeaderCell scope="row">2</CTableHeaderCell>
-        <CTableDataCell>みんなの日本語</CTableDataCell>
-        <CTableDataCell>https://drive.google.com</CTableDataCell>
-        <CTableDataCell>N5</CTableDataCell>
-      </CTableRow>
-      <CTableRow>
-      <CTableHeaderCell scope="row">3</CTableHeaderCell>
-        <CTableDataCell>みんなの日本語</CTableDataCell>
-        <CTableDataCell>https://drive.google.com</CTableDataCell>
-        <CTableDataCell>N5</CTableDataCell>
-      </CTableRow>
+      ))}
     </CTableBody>
   </CTable>
   </CCardBody>

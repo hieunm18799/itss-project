@@ -8,7 +8,9 @@ import {
   CTableHeaderCell,
   CTableRow,
 } from '@coreui/react';
-import CIcon from '@coreui/icons-react'
+import CIcon from '@coreui/icons-react';
+import { firestore } from '../../../services/firebase/firebase';
+
 
 const UserList = () => {
 
