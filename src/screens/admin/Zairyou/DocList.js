@@ -37,6 +37,23 @@ const DocList = () => {
   useEffect(() => {
     getReferences();
   }, []);
+
+  const deleteX = (deleteid) => {
+    console.log('nhan xoaaaaa id '+ deleteid);
+    let db = firestore.doc(`References/All`);
+    db.get().then((doc) => {
+      if (doc.exists) {
+        let data = doc.data()["documents"];
+        db.update({
+          documents: data.filter(document => document.id !== deleteid)
+        })
+          console.log(data);
+        } else {
+        // doc.data() will be undefined in this case
+        console.log("no data");
+      }
+    });
+  };
   return (
     <CCard>
   <CCardHeader>Danh sách Tài liệu</CCardHeader>
@@ -57,12 +74,12 @@ const DocList = () => {
         <CTableHeaderCell scope="row">{item?.id}</CTableHeaderCell>
         <CTableDataCell >{item?.title}</CTableDataCell>
         <CTableDataCell> <CLink href={item?.url}> Truy cập </CLink></CTableDataCell>
-        <CTableDataCell><img
-              src={item?.cover}
+        <CTableDataCell> <img 
+        src={item?.cover}
               style={{ height: "70%", width: "70%", objectFit: "cover" }}
             /></CTableDataCell>
         <CTableDataCell scope="row">
-          <CButton color="success"><CIcon size={'lg'} name={'cil-pencil'} class="text-primary" /> </CButton>
+          <CButton color="success" component={deleteX(item?.id)} ><CIcon size={'lg'} name={'cil-pencil'} class="text-primary" /> </CButton>
         </CTableDataCell>
         <CTableDataCell scope="row">
         <CButton color="danger"><CIcon size={'lg'} name={'cil-x'} class="text-primary" /></CButton>

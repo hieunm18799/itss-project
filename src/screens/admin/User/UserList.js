@@ -18,10 +18,10 @@ const UserList = () => {
     <CTableHead>
       <CTableRow>
         <CTableHeaderCell scope="col">#</CTableHeaderCell>
-        <CTableHeaderCell scope="col">アカウント</CTableHeaderCell>
-        <CTableHeaderCell scope="col">名前 </CTableHeaderCell>
-        <CTableHeaderCell scope="col">メール</CTableHeaderCell>
-        <CTableHeaderCell scope="col">CRUD</CTableHeaderCell>
+        <CTableHeaderCell scope="col">Tên tài khoản</CTableHeaderCell>
+        <CTableHeaderCell scope="col">Họ Tên </CTableHeaderCell>
+        <CTableHeaderCell scope="col">Email</CTableHeaderCell>
+        <CTableHeaderCell scope="col">Thao tác</CTableHeaderCell>
       </CTableRow>
     </CTableHead>
     <CTableBody>
