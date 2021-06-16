@@ -9,9 +9,12 @@ import {
   CTableRow,
   CCard,
   CCardBody,
-  CCardHeader
+  CCardHeader,
+  CLink
 } from '@coreui/react';
 import { firestore } from '../../../services/firebase/firebase';
+import CIcon from '@coreui/icons-react';
+
 
 const DocList = () => {
   const [references, setReferences] = useState([]);
@@ -37,25 +40,33 @@ const DocList = () => {
     <CCard>
   <CCardHeader>Danh sách Tài liệu</CCardHeader>
   <CCardBody>
-    <CTable>
-    <CTableHead>
+    <CTable align="middle"  hover >
+    <CTableHead color="dark">
       <CTableRow>
         <CTableHeaderCell scope="col">#</CTableHeaderCell>
-        <CTableHeaderCell scope="col">Tên</CTableHeaderCell>
-        <CTableHeaderCell scope="col">Link</CTableHeaderCell>
-        <CTableHeaderCell scope="col">Ảnh</CTableHeaderCell>
+        <CTableHeaderCell scope="col" className="w-20">Tên</CTableHeaderCell>
+        <CTableHeaderCell scope="col" className="w-20">Link</CTableHeaderCell>
+        <CTableHeaderCell scope="col" className="w-20">Ảnh</CTableHeaderCell>
+        <CTableHeaderCell scope="col" colspan="2">Thao tác</CTableHeaderCell>
       </CTableRow>
     </CTableHead>
-    <CTableBody>
+    <CTableBody >
       {references?.map((item) => (
         <CTableRow>
         <CTableHeaderCell scope="row">{item?.id}</CTableHeaderCell>
-        <CTableDataCell>{item?.title}</CTableDataCell>
-        <CTableDataCell>{item?.url}</CTableDataCell>
+        <CTableDataCell >{item?.title}</CTableDataCell>
+        <CTableDataCell> <CLink href={item?.url}> Truy cập </CLink></CTableDataCell>
         <CTableDataCell><img
               src={item?.cover}
-              style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              style={{ height: "70%", width: "70%", objectFit: "cover" }}
             /></CTableDataCell>
+        <CTableDataCell scope="row">
+          <CIcon size={'lg'} name={'cil-pencil'} class="text-primary" /> 
+        </CTableDataCell>
+        <CTableDataCell scope="row">
+          <CIcon size={'lg'} name={'cil-x'} class="text-primary" />
+        </CTableDataCell>
+        
       </CTableRow>
       ))}
     </CTableBody>

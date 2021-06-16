@@ -8,9 +8,6 @@ import {
   CTableRow,
 } from '@coreui/react'
 
-const WidgetsDropdown = lazy(() => import('../../../components/Widgets/WidgetsDropdown'));
-const WidgetsBrand = lazy(() => import('../../../components/Widgets/WidgetsBrand.js'))
-
 const Dashboard = () => {
 
   return (

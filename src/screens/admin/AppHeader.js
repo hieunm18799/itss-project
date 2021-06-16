@@ -35,7 +35,7 @@ export const AppHeader = () => {
         </CHeaderBrand>
         <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>
-            <CNavLink to="/admin" component={NavLink} activeClassName="active">
+            <CNavLink to="/" component={NavLink} activeClassName="active">
             <h2 style={{color: "#000066", fontSize: 40, textDecoration: "underline"}}><b>Trang chủ</b></h2>
             </CNavLink>
           </CNavItem>

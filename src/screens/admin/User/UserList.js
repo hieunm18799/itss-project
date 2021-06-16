@@ -11,9 +11,8 @@ import {
 import CIcon from '@coreui/icons-react';
 import { firestore } from '../../../services/firebase/firebase';
 
-
 const UserList = () => {
-
+  
   return (
     <CTable>
     <CTableHead>
