@@ -1,0 +1,166 @@
+body {
+  background-color: #e5e5e5;
+}
+
+.vocabulary-item-content {
+  width: 40px;
+  height: 40px;
+  /* border-radius: 50%; */
+  text-align: center;
+  justify-content: center;
+  background-color: #c4c4c4;
+  margin-right: 15px;
+  padding-top: 7px;
+  /* box-shadow: -1px 0px 15px 3px rgba(0, 0, 0, 0.75); */
+  /* box-shadow: -1px 0px 89px -36px rgba(0, 0, 0, 0.75); */
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.selected {
+  background-color: #f27a54;
+}
+
+.vocabulary-list {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.vocabulary-section__content {
+  width: 70%;
+  margin: 7% auto;
+}
+
+.vocabulary-meaning__container {
+  padding: 15px 50px;
+  width: 100%;
+  background-color: #fff;
+  height: 120px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.vocabulary-main__container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.vocabulary-writing__container {
+  width: 35%;
+  background-color: white;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.vocabulary-reading__container {
+  width: 62%;
+  background-color: white;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 10px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.vocabulary-writing__title {
+  color: #cfcfcf;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.vocabulary-reading__title {
+  color: #cfcfcf;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.vocabulary-writing__main {
+  font-size: 190px;
+  margin-top: -25px;
+}
+
+.vocabulary-listening__container {
+  width: 100%;
+  padding: 20px 30px;
+}
+
+.vocabulary-listening-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.list-icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f27a54;
+  margin-right: 20px;
+}
+
+.item--name {
+  width: 40%;
+}
+
+.item--meaning {
+  width: 25%;
+}
+
+.item--listening {
+  width: 30%;
+  height: 15px;
+  /* background-color: #c4c4c4; */
+  /* border-radius: 5px; */
+}
+
+.audio {
+  width: 100%;
+  height: 25px;
+}
+
+#myVideo {
+  /* position: fixed; */
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.meaning__row {
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.meaning__item {
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+}
+
+.meaning__item--title {
+  color: #ccccff;
+  text-transform: uppercase;
+  margin-right: 25px;
+}
+
+.meaning__item--content {
+  text-transform: uppercase;
+}
