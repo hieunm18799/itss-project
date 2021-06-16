@@ -33,6 +33,8 @@ class AddTailieu extends React.Component {
       this.handleChangeTitle = this.handleChangeTitle.bind(this);
       this.handleChangeFile = this.handleChangeFile.bind(this);
       this.handleChangeType = this.handleChangeType.bind(this);
+      this.handleChangeLink = this.handleChangeLink.bind(this);
+
 
 
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -48,12 +50,16 @@ class AddTailieu extends React.Component {
 
     handleChangeType(event) {
         this.setState({Type: event.target.value});
+      }    
+      handleChangeLink(event) {
+        this.setState({Link: event.target.value});
       }
+  
   
     handleSubmit(event) {
         alert('Đã thêm : ' + this.state.Title);
         event.preventDefault();
-        
+
       //up img 
       var metadata = {
         contentType: 'image/jpeg'
@@ -79,7 +85,7 @@ class AddTailieu extends React.Component {
             db.update({
              documents: firebase.firestore.FieldValue.arrayUnion({
                                                                     'title' : this.state.Title,
-                                                                    'cove'  : this.state.LinkFile,
+                                                                    'cove'  : this.state.Link, //this.state.LinkFile - thay = linkfile nếu muốn up file 
                                                                     'type'  : this.state.Type,
                                                                     'url'   : this.state.File,
                                                                 })
@@ -123,6 +129,11 @@ class AddTailieu extends React.Component {
             Ảnh:
           <input type="file" ref={this.fileInput} accept="image/x-png,image/jpeg"/>
         </label>
+        <label>
+            Link ảnh thay thế:
+            <input type="text" value={this.state.Link} onChange={this.handleChangeLink} />
+          </label>
+        
         <br/>
         
       </CCardBody>
