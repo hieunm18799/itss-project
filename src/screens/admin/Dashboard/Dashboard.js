@@ -18,24 +18,24 @@ const Dashboard = () => {
       <CWidgetDropdown
         className="mb-4"
         color="primary"
-        value="9.823"
-        title="Members online"
+        value="100"
+        title="ユーザー数"
       />
     </CCol>
     <CCol sm="6" lg="4">
           <CWidgetDropdown
           className="mb-4"
           color="info"
-          value="9.823"
-          title="Members online"
+          value="20"
+          title="コース数"
         />
     </CCol>
     <CCol sm="6" lg="4">
       <CWidgetDropdown
         className="mb-4"
         color="warning"
-        value="9.823"
-        title="Members online"
+        value="120"
+        title="材料数"
       />
     </CCol>
   </CRow>
