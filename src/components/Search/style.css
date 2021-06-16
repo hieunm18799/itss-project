@@ -1,0 +1,9 @@
+.filter__item {
+    border: none;
+    border-radius: 4px;
+}
+
+.filter__item:hover {
+    background: #5bff7f;
+    border: none;
+}

@@ -4,6 +4,8 @@ import Filter from "../../components/Filter";
 import { NavBar } from "../../components/NavBar";
 import DocumentCard from "../../components/DocumentCard";
 import { firestore } from "../../services/firebase/firebase";
+import {BsSearch} from "react-icons/bs";
+import Search from "../../components/Search";
 
 const listFilter = [
   {
@@ -31,7 +33,7 @@ const listFilter = [
 export const References = () => {
   const [references, setReferences] = useState([]);
   const [checkReferences, setCheckReferences] = useState([]);
-
+  const [searchKeyword, setSearchKeyword] = useState('');
   const getReferences = () => {
     let db = firestore.doc(`References/All`);
     db.get().then((doc) => {
@@ -45,16 +47,20 @@ export const References = () => {
       }
     });
   };
-
+  useEffect(() => {
+    getReferences();
+  }, []);
+  const handleSearch = (Keyword)=> {
+      setSearchKeyword(Keyword);
+      const listSearched = references.filter((data) =>
+          data.title.toLowerCase().includes(Keyword.toLowerCase())
+      );
+      setReferences(listSearched);
+  }
   const setStateFilter = (typeCheck) => {
     let tmp = [...checkReferences.filter((item) => item.type === typeCheck)];
     typeCheck === "all" ? setReferences(checkReferences) : setReferences(tmp);
   };
-
-  useEffect(() => {
-    getReferences();
-  }, []);
-
   return (
     <div>
       {/* Navbar */}
@@ -70,6 +76,7 @@ export const References = () => {
             setStateFilter={(typeCheck) => setStateFilter(typeCheck)}
           />
           <div className="col-sm-9 p-4">
+            <Search handleSearch={handleSearch}/>
             <div className="row row-cols-2">
               {references?.map((item) => (
                 <DocumentCard

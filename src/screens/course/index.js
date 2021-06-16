@@ -63,13 +63,14 @@ export const Course = () => {
       L5: { data: [], process: 0 },
     };
     if (UID) {
-      const db = firestore.doc(`/User/${UID}/History/N1`);
+      const db = firestore.doc(`/User/${UID}`);
       db.get()
         .then((doc) => {
           if (!doc.exists) {
             for (let i = 1; i < 6; i++) {
               firestore.doc(`User/${UID}/History/N${i}`).set(obj);
             }// console.log('exist',UID)
+            firestore.doc(`User/${UID}`).set({privilege:'default'})
           }
         })
         .then(() => {

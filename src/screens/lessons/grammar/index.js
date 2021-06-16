@@ -15,8 +15,15 @@ export const Grammar = ({ doneLesson, dataLesson }) => {
       </div>
       <div className="content container-fluid text-center">
         <h3 className="inline-block mb-3">{dataLesson?.title}</h3>
-        <div className="img-content">
-          <img src={dataLesson?.url} className="" alt={dataLesson?.title} />
+        <div className="grammar-box">
+          <label className="grammar__title">Cách dùng:</label>
+          <p className="grammar__content grammar__structure">{dataLesson?.structure}</p>
+          <label className="grammar__title">Ý nghĩa:</label>
+          <p className="grammar__content">{dataLesson?.mean}</p>
+          <label className="grammar__title">Giải thích:</label>
+          <p className="grammar__content">{dataLesson?.detail}</p>
+          <label className="grammar__title">Ví dụ:</label>
+          <p className="grammar__content">{dataLesson?.example}</p>
         </div>
       </div>
       <div className="done-bar fixed-bottom d-flex justify-content-center">

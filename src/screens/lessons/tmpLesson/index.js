@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { Grammar } from "../grammar";
-import { Vocabulary } from "../vocabulary";
+import { Kanzi } from "../kanzi";
 import { Reading } from "../reading";
 import { Test } from "../test";
 import {firebaseAuth, firestore} from "../../../services/firebase/firebase";
@@ -19,7 +19,10 @@ export const Temp = (props) => {
 
   const done = () => {
     let db = firestore.doc(`User/${UID}/History/${stateCourse}`);
-    let tmp = [...dataHistory, idLesson];
+    let tmp = dataHistory;
+    if(!tmp.includes(idLesson)){
+      tmp = [...dataHistory, idLesson];
+    }
     let updateProcess = parseFloat(((tmp.length / 8) * 100).toFixed(2));
     db.update({
       [stateLesson]: { data: tmp, process: updateProcess },
@@ -32,6 +35,8 @@ export const Temp = (props) => {
   const getDataLesson = () => {
     const typeLesson = (function () {
       switch (checkTypeLess) {
+        case "K":
+          return "Kanzi";
         case "G":
           return "Grammar";
         case "R":
@@ -61,8 +66,8 @@ export const Temp = (props) => {
   switch (checkTypeLess) {
     case "G":
       return <Grammar doneLesson={() => done()} dataLesson={dataLesson} />;
-    case "V":
-      return <Vocabulary doneLesson={() => done()} />;
+    case "K":
+      return <Kanzi doneLesson={() => done()} dataLesson={dataLesson} />;
     case "R":
       return <Reading doneLesson={() => done()} dataLesson={dataLesson} />;
     case "T":
