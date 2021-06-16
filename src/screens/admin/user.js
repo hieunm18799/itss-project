@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useContext,useState } from "react";
+import { Link, Redirect } from "react-router-dom";
 import AppSidebar from "./AppSidebar";
 import {AppHeader} from "./AppHeader";
 import {AppContent} from "./AppContent";
 import UserList from "./User/UserList";
+import { AuthContext } from "../../services/auth";
+import { firestore } from "../../services/firebase/firebase";
+
 const YuzaKanri = () => {
+  const [privilege, setPrivilege] = useState(null);
+  const { currentUser } = useContext(AuthContext);
+  const UID = currentUser?.uid;
+  const db = firestore.doc(`User/${UID}`);
+  db.get().then((doc) => {
+    if (doc.exists) {
+      setPrivilege(doc.data().privilege);
+    }
+  });
+  if (currentUser && (privilege === 'admin')) {
   return (
     <div>
       <AppSidebar />
@@ -14,7 +28,8 @@ const YuzaKanri = () => {
         </div>
       </div>
     </div>
-  )
+  )}else {
+    return <Redirect to='/' />}
 }
 export default YuzaKanri
 

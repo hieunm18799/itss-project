@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useContext,useState } from "react";
 import AppSidebar from "./AppSidebar";
 import {AppHeader} from "./AppHeader";
 import {AppContent} from "./AppContent";
 import DocList from "./Zairyou/DocList";
+import { AuthContext } from "../../services/auth";
+import { firestore } from "../../services/firebase/firebase";
+import { Link, Redirect } from "react-router-dom";
+
+
 const ZairyouKanri = () => {
+  const [privilege, setPrivilege] = useState(null);
+  const { currentUser } = useContext(AuthContext);
+  const UID = currentUser?.uid;
+  const db = firestore.doc(`User/${UID}`);
+  db.get().then((doc) => {
+    if (doc.exists) {
+      setPrivilege(doc.data().privilege);
+    }
+  });
+  if (currentUser && (privilege === 'admin')) {
   return (
     <div>
       <AppSidebar />
@@ -14,7 +29,8 @@ const ZairyouKanri = () => {
         </div>
       </div>
     </div>
-  )
+  )}else {
+    return <Redirect to='/' />}
 }
 export default ZairyouKanri
 
