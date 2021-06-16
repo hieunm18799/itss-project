@@ -5,6 +5,9 @@ import {
     CCardHeader,
     CButton,
     CCardFooter,
+    CForm,
+    CFormLabel,
+    CFormControl,
   } from '@coreui/react';
   import {
     Redirect,
@@ -107,37 +110,37 @@ class AddTailieu extends React.Component {
           <AppHeader />
           <div className="body flex-grow-1 px-3">
         <CCard>
-      <CCardHeader>Thêm tài liệu</CCardHeader>
+      <CCardHeader component="h5">Thêm tài liệu</CCardHeader>
     <form onSubmit={this.handleSubmit}>
       <CCardBody>
-          <label>
+          <CFormLabel htmlFor="exampleFormControlInput1">
             Tiêu đề:
-            <input type="text" value={this.state.Title} onChange={this.handleChangeTitle} />
-          </label>
+            <CFormControl type="text" value={this.state.Title} onChange={this.handleChangeTitle} />
+          </CFormLabel>
           <br/>
-          <label>
+          <CFormLabel htmlFor="exampleFormControlInput1">
             Liên kết:
-            <input type="text" value={this.state.File} onChange={this.handleChangeFile} />
-          </label>
+            <CFormControl type="text" value={this.state.File} onChange={this.handleChangeFile} />
+          </CFormLabel>
           <br/>
-          <label>
+          <CFormLabel htmlFor="exampleFormControlInput1">
             Type:
-            <input type="text" value={this.state.Type} onChange={this.handleChangeType} />
-          </label>
+            <CFormControl type="text" value={this.state.Type} onChange={this.handleChangeType} />
+          </CFormLabel>
           <br/>
-          <label>
+          <CFormLabel htmlFor="exampleFormControlInput1">
             Ảnh:
-          <input type="file" ref={this.fileInput} accept="image/x-png,image/jpeg"/>
-        </label>
-        <label>
+          <CFormControl type="file" ref={this.fileInput} accept="image/x-png,image/jpeg"/>
+        </CFormLabel>
+        <CFormLabel htmlFor="exampleFormControlInput1">
             Link ảnh thay thế:
-            <input type="text" value={this.state.Link} onChange={this.handleChangeLink} />
-          </label>
+            <CFormControl type="text" value={this.state.Link} onChange={this.handleChangeLink} />
+          </CFormLabel>
         
         <br/>
         
       </CCardBody>
-      <CCardFooter className="text-muted"><input type="submit" value="Submit" /></CCardFooter>
+      <CCardFooter className="text-muted"><CButton color="success" type="submit" value="Submit">Submit</CButton></CCardFooter>
       </form>
     </CCard>
     </div>
