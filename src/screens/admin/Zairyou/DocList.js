@@ -10,7 +10,8 @@ import {
   CCard,
   CCardBody,
   CCardHeader,
-  CLink
+  CLink,
+  CButton
 } from '@coreui/react';
 import { firestore } from '../../../services/firebase/firebase';
 import CIcon from '@coreui/icons-react';
@@ -61,10 +62,10 @@ const DocList = () => {
               style={{ height: "70%", width: "70%", objectFit: "cover" }}
             /></CTableDataCell>
         <CTableDataCell scope="row">
-          <CIcon size={'lg'} name={'cil-pencil'} class="text-primary" /> 
+          <CButton color="success"><CIcon size={'lg'} name={'cil-pencil'} class="text-primary" /> </CButton>
         </CTableDataCell>
         <CTableDataCell scope="row">
-          <CIcon size={'lg'} name={'cil-x'} class="text-primary" />
+        <CButton color="danger"><CIcon size={'lg'} name={'cil-x'} class="text-primary" /></CButton>
         </CTableDataCell>
         
       </CTableRow>
