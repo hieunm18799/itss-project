@@ -17,6 +17,7 @@ import { Course } from "./screens/course";
 import { DetailCourse } from "./screens/detailCourse";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import { Temp } from "./screens/lessons/tmpLesson";
+import AddTailieu from "./screens/add";
 import store from './store';
 
 
@@ -28,6 +29,7 @@ class App extends Component {
           <Switch>
             <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
             <Route exact path="/admin" name="Admin" render={(props) => <AdminPage {...props} />}/>
+            <Route exact path="/admin/add" name="Add" render={(props) => <AddTailieu {...props} />}/>
             <Route exact path="/admin/kosu" name="KosuKanri" render={(props) => <KosuKanri {...props} />}/>
             <Route exact path="/admin/yuza" name="YuzaKanri" render={(props) => <YuzaKanri {...props} />}/>
             <Route exact path="/admin/zairyou" name="ZairyouKanri" render={(props) => <ZairyouKanri {...props} />}/>
