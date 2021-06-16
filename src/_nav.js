@@ -6,7 +6,7 @@ const _nav = [
   {
     _component: 'CNavItem',
     as: NavLink,
-    anchor: 'ダッシュボード',
+    anchor: 'Dashboard',
     to: '/admin',
     icon: <CIcon name="cil-speedometer" customClasses="nav-icon" />,
     badge: {
@@ -16,26 +16,26 @@ const _nav = [
   },
   {
     _component: 'CNavTitle',
-    anchor: '管理ウェブサイト',
+    anchor: 'Quản lý website',
   },
   {
     _component: 'CNavItem',
     as: NavLink,
-    anchor: 'ユーザー管理',
+    anchor: 'Quản lý người dùng',
     to: '/admin/yuza',
     icon: <CIcon name="cil-drop" customClasses="nav-icon" />,
   },
   {
     _component: 'CNavItem',
     as: NavLink,
-    anchor: 'コース管理',
+    anchor: 'Quản lý khoá học',
     to: '/admin/kosu',
     icon: <CIcon name="cil-pencil" customClasses="nav-icon" />,
   },
   {
     _component: 'CNavItem',
     as: NavLink,
-    anchor: '材料管理',
+    anchor: 'Quản lý tài liệu',
     to: '/admin/zairyou',
     icon: <CIcon name="cil-pencil" customClasses="nav-icon" />,
   },

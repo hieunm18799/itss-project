@@ -19,7 +19,7 @@ const Dashboard = () => {
         className="mb-4"
         color="primary"
         value="100"
-        title="ユーザー数"
+        title="Số lượng học viên"
       />
     </CCol>
     <CCol sm="6" lg="4">
@@ -27,7 +27,7 @@ const Dashboard = () => {
           className="mb-4"
           color="info"
           value="20"
-          title="コース数"
+          title="Tổng số khoá học "
         />
     </CCol>
     <CCol sm="6" lg="4">
@@ -35,7 +35,7 @@ const Dashboard = () => {
         className="mb-4"
         color="warning"
         value="120"
-        title="材料数"
+        title="Tổng số tài liệu "
       />
     </CCol>
   </CRow>

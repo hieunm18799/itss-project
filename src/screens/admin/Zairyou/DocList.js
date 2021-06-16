@@ -16,15 +16,15 @@ const DocList = () => {
 
   return (
     <CCard>
-  <CCardHeader>材料リスト</CCardHeader>
+  <CCardHeader>Danh sách Tài liệu</CCardHeader>
   <CCardBody>
     <CTable>
     <CTableHead>
       <CTableRow>
         <CTableHeaderCell scope="col">#</CTableHeaderCell>
-        <CTableHeaderCell scope="col">名前</CTableHeaderCell>
-        <CTableHeaderCell scope="col">リンく</CTableHeaderCell>
-        <CTableHeaderCell scope="col">レベル</CTableHeaderCell>
+        <CTableHeaderCell scope="col">Tên</CTableHeaderCell>
+        <CTableHeaderCell scope="col">Link</CTableHeaderCell>
+        <CTableHeaderCell scope="col">Trình độ</CTableHeaderCell>
       </CTableRow>
     </CTableHead>
     <CTableBody>
@@ -35,15 +35,16 @@ const DocList = () => {
         <CTableDataCell>N5</CTableDataCell>
       </CTableRow>
       <CTableRow>
-        <CTableHeaderCell scope="row">2</CTableHeaderCell>
-        <CTableDataCell>Jacob</CTableDataCell>
-        <CTableDataCell>Thornton</CTableDataCell>
-        <CTableDataCell>@fat</CTableDataCell>
+      <CTableHeaderCell scope="row">2</CTableHeaderCell>
+        <CTableDataCell>みんなの日本語</CTableDataCell>
+        <CTableDataCell>https://drive.google.com</CTableDataCell>
+        <CTableDataCell>N5</CTableDataCell>
       </CTableRow>
       <CTableRow>
-        <CTableHeaderCell scope="row">3</CTableHeaderCell>
-        <CTableDataCell colspan="2">Larry the Bird</CTableDataCell>
-        <CTableDataCell>@twitter</CTableDataCell>
+      <CTableHeaderCell scope="row">3</CTableHeaderCell>
+        <CTableDataCell>みんなの日本語</CTableDataCell>
+        <CTableDataCell>https://drive.google.com</CTableDataCell>
+        <CTableDataCell>N5</CTableDataCell>
       </CTableRow>
     </CTableBody>
   </CTable>

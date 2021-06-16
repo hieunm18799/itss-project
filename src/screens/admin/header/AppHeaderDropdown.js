@@ -19,12 +19,12 @@ const AppHeaderDropdown = () => {
       <CDropdownMenu className="pt-0" placement="bottom-end">
         <CDropdownItem href="#">
           <CIcon name="cil-user" className="me-2" />
-          プロフィール
+          Profile
         </CDropdownItem>
         <CDropdownDivider />
         <CDropdownItem href="#">
           <CIcon name="cil-lock-locked" className="me-2" />
-          サインアウト
+          Logout
         </CDropdownItem>
       </CDropdownMenu>
     </CDropdown>
