@@ -22,25 +22,7 @@ const AdminPage = () => {
     }); 
     }
   ) 
-      
-    // return (
-    //   <div>
-    //   {console.log('privilege'+privilege)}
-    //   {(privilege === 'admin') ? 
-    //   <div>
-    //   <AppSidebar />
-    //     <div className="wrapper d-flex flex-column min-vh-100 bg-light">
-    //       <AppHeader />
-    //       <div className="body flex-grow-1 px-3">
-    //         <Dashboard/>
-    //       </div>
-    //     </div>
-    //     </div> : <Redirect to='/' />
-    //     }
-        
-    //   </div>
-    // )
-    return(
+    return (
       <div>
     {currentUser && privilege === 'admin' ? 
             (<div>
@@ -54,11 +36,9 @@ const AdminPage = () => {
          </div>
          </div>
          </div>
-          ) : <div>hello</div>} 
+          ) : <div>You aren't admin</div>} 
       </div>
     )
-    
-       
 }
 export default AdminPage
 

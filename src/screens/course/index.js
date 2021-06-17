@@ -24,7 +24,14 @@ export const Course = () => {
     0
   );
   const { currentUser } = useContext(AuthContext);
+  const [privilege, setPrivilege] = useState(null);
   const UID = currentUser?.uid;
+  const db = firestore.doc(`User/${UID}`);
+  db.get().then((doc) => {
+    if (doc.exists) {
+      setPrivilege(doc.data().privilege);
+    }
+  });
 
   const dispatch = useDispatch();
   const level = [
@@ -85,7 +92,9 @@ export const Course = () => {
     addHistory();
   }, []);
 
+  console.log(privilege);
   if (!currentUser) return <Redirect to={ROUTES.SIGN_IN} />;
+  else if (privilege === 'admin') return <Redirect to={ROUTES.ADMIN} />;
   else if (loading === false) return <Loading />;
   else
     return (

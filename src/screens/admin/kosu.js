@@ -1,4 +1,4 @@
-import React, { useContext,useState }  from "react";
+import React, { useContext,useState, useEffect }  from "react";
 import { Link, Redirect } from "react-router-dom";
 import AppSidebar from "./AppSidebar";
 import {AppHeader} from "./AppHeader";
@@ -12,15 +12,19 @@ const KosuKanri = () => {
   const { currentUser } = useContext(AuthContext);
   const UID = currentUser?.uid;
   const db = firestore.doc(`User/${UID}`);
-  db.get().then((doc) => {
-    if (doc.exists) {
-      setPrivilege(doc.data().privilege);
-      console.log('this is : '+doc.data().privilege);
+  useEffect(
+    () =>{
+      db.get().then((doc) => {
+      if (doc.exists) {
+        setPrivilege(doc.data().privilege);
+      }
+    }); 
     }
-  });
-  if (currentUser && (privilege === 'admin')) {
+  ) 
   return (
     <div>
+  {currentUser && privilege === 'admin' ? 
+          (<div>
       <AppSidebar />
       <div className="wrapper d-flex flex-column min-vh-100 bg-light">
         <AppHeader />
@@ -29,8 +33,9 @@ const KosuKanri = () => {
         </div>
       </div>
     </div>
-  )}else {
-    return <Redirect to='/' />}
+        ) : <div>You aren't admin</div>} 
+    </div>
+  )
 }
 export default KosuKanri
 
