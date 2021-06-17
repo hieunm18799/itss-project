@@ -3,14 +3,12 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBE6gEas0UHh5fcnGrNBm-FOZlb_QSEbWg",
-    authDomain: "japanese-course-9a005.firebaseapp.com",
-    databaseURL: "https://japanese-course-9a005.firebaseio.com",
-    projectId: "japanese-course-9a005",
-    storageBucket: "japanese-course-9a005.appspot.com",
-    messagingSenderId: "970236101184",
-    appId: "1:970236101184:web:2d3afa5a58b647dd3755a5",
-    measurementId: "G-NHGT3Z3QEZ"
+  apiKey: "AIzaSyAhJ1Km2Cf7Ddy9YA4XdNSspwpPBzV__iM",
+  authDomain: "itss-elearning-web.firebaseapp.com",
+  projectId: "itss-elearning-web",
+  storageBucket: "itss-elearning-web.appspot.com",
+  messagingSenderId: "863244737757",
+  appId: "1:863244737757:web:4fc1104578ab6e56544f34"
   };
 
 firebase.initializeApp(firebaseConfig);
