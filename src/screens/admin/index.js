@@ -9,16 +9,17 @@ import { firestore } from "../../services/firebase/firebase";
 
 
 const AdminPage = () => {
-  const [privilege, setPrivilege] = useState(null);
-  const { currentUser } = useContext(AuthContext);
-  const UID = currentUser?.uid;
-  const db = firestore.doc(`User/${UID}`);
-  db.get().then((doc) => {
-    if (doc.exists) {
-      setPrivilege(doc.data().privilege);
-    }
-  });
-  if (currentUser && (privilege === 'admin')) {
+  // const [privilege, setPrivilege] = useState(null);
+  // const { currentUser } = useContext(AuthContext);
+  // const UID = currentUser?.uid;
+  // const db = firestore.doc(`User/${UID}`);
+  // db.get().then((doc) => {
+  //   if (doc.exists) {
+  //     setPrivilege(doc.data().privilege);
+  //     console.log(privilege, doc.data());
+  //   }
+  // }).then(() => {
+  // if (currentUser && (privilege === 'admin')) {
     return (
       <div>
         <AppSidebar />
@@ -29,8 +30,11 @@ const AdminPage = () => {
           </div>
         </div>
       </div>
-    )}else {
-      return <Redirect to='/' />}
+    )
+  // }else {
+  //     return <Redirect to='/' />
+  //   }
+  // });
 }
 export default AdminPage
 
