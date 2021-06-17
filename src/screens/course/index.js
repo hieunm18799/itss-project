@@ -94,7 +94,6 @@ export const Course = () => {
 
   console.log(privilege);
   if (!currentUser) return <Redirect to={ROUTES.SIGN_IN} />;
-  else if (privilege === 'admin') return <Redirect to={ROUTES.ADMIN} />;
   else if (loading === false) return <Loading />;
   else
     return (
