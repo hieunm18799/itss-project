@@ -15,6 +15,7 @@ const KosuKanri = () => {
   db.get().then((doc) => {
     if (doc.exists) {
       setPrivilege(doc.data().privilege);
+      console.log('this is : '+doc.data().privilege);
     }
   });
   if (currentUser && (privilege === 'admin')) {

@@ -19,6 +19,7 @@ export const NavBar = ({ style }) => {
       setPrivilege(doc.data().privilege);
     }
   });
+  console.log('nav ===== ' + (currentUser && privilege === 'admin'));
   return (
     <Navbar
       style={{ ...style }}
